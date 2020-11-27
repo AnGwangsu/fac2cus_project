@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <a th:href="@{/admin/userInfo}">회원 정보</a>
+        <a th:href="@{/admin/userReview}">회원 리뷰</a>
+        <a th:href="@{/admin/userOrder}">회원 주문</a>
+        <div th:text="${info.getId()}"></div>
+</body>
+</html>

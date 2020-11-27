@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<style>
+    .login_wrap{width:100%; height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;}
+    .login_wrap form input{display:flex; flex-direction:column;}
+    #enterprise_login{display:none;}
+    .login_wrap .move_register{display:block;}
+    .loginType{display: flex; flex-direction: column;}
+    #googleLogin img{width: 200px;}
+    #naverLogin img{width: 205px;}
+</style>
+<body>
+<div class="login_wrap">
+    <form id="user_login" method="post" th:action="@{/login}">
+        <input type="text" name="username" placeholder="회원아이디를 입력하세요">
+        <input type="password" name="password" placeholder="비밀번호를 입력하세요">
+        <input type="submit" value="로그인">
+    </form>
+    <form id="enterprise_login" method="post" th:action="@{/erp/erpLogin}">
+        <input type="text" name="erpname" placeholder="기업아이디를 입력하세요">
+        <input type="password" name="passowrd" placeholder="비밀번호를 입력하세요">
+        <input type="submit" value="로그인">
+    </form>
+    <div class="loginType">
+        <div>
+            일반 회원<input type="radio" id="user" name="select" checked>
+            기업 회원<input type="radio" id="enterprise" name="select">
+        </div>
+        <a th:href="@{/userRegister}" class="move_register">아직 아이디가 없으세요?</a>
+        <a th:href="@{/oauth2/authorization/google}" id="googleLogin"><img src="/img/google.png"></a>
+        <a th:href="@{/oauth2/authorization/naver}" id="naverLogin"><img src="https://lh3.googleusercontent.com/proxy/j20UEBV_pfQs3g5zMtPVZ9SMEBkHjh2tT-amNCBLWiSJXvIBeN8fUfcxKekFAUaryqow-W3v6_8paF-EUAm0dloL4yo69fUljVLMgRHfCRyAzwe4iHybx-tkRXecYb_XFRg87OcTYuvBVHcbTB3eFZppEKdRK56aZ7IfzaTLQwp_XOaEMLq2c1B5FbT5yOkMBsFD_a9Rj5EXpt45PhgS0pbVrUiXw5eS6Qivbhs9XzW9aE7sAjT8B3k9NIaEohlVRDlmWH_jAW-nJhYfYbpzVE2_VSBmC_RA-mCxMyVc8D8HzCoQDYcHsRgWv7fUYm-ksiujS2W0ZxuiMx8Iv1W2vkjZNnyR1nn7v0ZvQ0oeGHkXGzhenA-VubTktT6Pz-Cv4w2hfWI"></a>
+    </div>
+</div>
+
+<script>
+    $('#user').click(function(){
+        $("#enterprise_login").css("display","none")
+        $("#user_login").css("display","block")
+    })
+    $("#enterprise").click(function(){
+        $("#user_login").css("display","none")
+        $("#googleLogin").css("display","none")
+        $("#naverLogin").css("display","none")
+        $("#enterprise_login").css("display","block")
+    })
+</script>
+</body>
+</html>

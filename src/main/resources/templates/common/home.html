@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Main</title>
+</head>
+<body>
+<!-- navigation bar -->
+<div class="navbar">
+    <img src="http://makekitchen.co.kr/web/images/common/logo.png">
+    <ul class="menu-right">
+        <li><a th:href="@{/loginForm}" id="login-btn">Login</a></li>
+        <li><a href="#" id="se-btn">Self Estimate</a>
+        <li><a href="#" id="pf-btn">PortFolio</a>
+        <li><a href="#" id="rv-btn">Review</a>
+    </ul>
+</div>
+<!--header-->
+<section class="header">
+    <h1>MAKE A KITCHEN</h1>
+    <h2>주방 인테리어 전문, 메이키친</h2>
+    <h2>ict지식서비소와 융합하여 소비자와 공장을 직접 연결해</h2>
+    <h2>좋은 품질의 제품과 서비스를 제공합니다.</h2>
+</section>
+<section class="self_estimate">
+    <h1>Self Estimate</h1>
+    <div class="self_content">
+        <span><i class="fas fa-edit"></i>견적요청</span> >
+        <span><i class="far fa-check-square"></i>견적확인</span> >
+        <span><i class="fas fa-industry"></i>제품생산</span> >
+        <span><i class="fas fa-hammer"></i>시공</span>
+    </div>
+    <h2>한번의 대면으로 시공까지 완료!</h2>
+    <!-- <div class="self_link">
+        <a id="move_self" href="#">
+           견적 내기
+        </a>
+    </div> -->
+</section>
+
+<!--portfolio-->
+<section class="section_content portfolio">
+    <h1>Portfolio</h1>
+    <img src="http://www.monointerior.co.kr/board/data/cheditor4/2008/a003edaa80f54105ace74cb4f792afda_1598337110.25.jpg">
+    <img src="https://lh3.googleusercontent.com/proxy/tbY5EUDH2LS98nzzS27MDtIr8J2BvIhvbh8O4emH9ezArNbxhHTZisShUyZPI5hcoqoOPjzYUKJ9jVNyshHetc8xKhABX6u-Nu_0fDw7VhVMDsC2ChyEJZiz-Q16ZaKA2vqoDovt0qr2FtOOpNQ-CkD8-A6z2YJw5ke8aDR3gjk7vw">
+    <img src="https://lh3.googleusercontent.com/proxy/c_qKNTKwCxcL7PrP-lGCwrOzl9RiHiO28CwJlJ-WtRkFCkEb-qjxEgoa7WDdUs65gJDTn8dn_jS3O0ZJsSL714lqwnT0rRI6TH92lDcEVVquMsTH7VDJcbohRSduRPUGoRENe7GLtfwIZtBL9AasbDXvUsOewlSr-SDnosuWc_k1nQ">
+    <h2>다양한 시공 포트폴리오를 한눈에 볼 수 있습니다.</h2>
+    <!-- <a href="#"><i class="fas fa-forward"></i>더 보기</a> -->
+</section>
+
+<!--review-->
+<section class="section_content review">
+    <h1>Review</h1>
+    <div class="review_content">
+        <img src="https://www.the-pr.co.kr/news/photo/201803/32219_58601_5438.png">
+        <ul>
+            <li><h1>고객님들의 다양한 이용후기를</h1></li>
+            <li><h1>둘러보고 </h1></li>
+            <li><h1>직접 설계해보세요</h1></li>
+            <li><h3>메이키친이라면 직접 견적,설계를 하고</h3></li>
+            <li><h3>미리 예상견적까지 받아 볼 수있습니다.</h3></li>
+        </ul>
+    </div>
+</section>
+
+<!--footer-->
+<footer>
+    <div class="footer_content">
+
+    </div>
+</footer>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+<script src="interactive.js"></script>
+</body>
+</html>
